@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Shift Swap Approvals</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">MANAGER WORKSPACE</p>
+            <h1>Shift Swap Requests</h1>
+            <p>
+                Review and manage employee shift swap requests.
+            </p>
+        </div>
+
+        <a href="manager.html" class="header-link">
+            Back to Manager Dashboard
+        </a>
+    </header>
+
+    <!-- Requests accepted by employees -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>Pending Approval</h2>
+                <p class="muted">
+                    Swap requests accepted by employees
+                    and awaiting your approval.
+                </p>
+            </div>
+
+            <span id="pendingSwapCount" class="shift-count">
+                0 requests
+            </span>
+        </div>
+
+        <div id="pendingSwapList" class="shift-list">
+            <p class="muted">
+                No shift swaps awaiting approval.
+            </p>
+        </div>
+    </section>
+
+    <!-- Previously reviewed swaps -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>Request History</h2>
+                <p class="muted">
+                    Previously approved and rejected
+                    shift swap requests.
+                </p>
+            </div>
+        </div>
+
+        <div id="swapHistoryList" class="shift-list">
+            <p class="muted">
+                No previous shift swap requests.
+            </p>
+        </div>
+    </section>
+
+    <a href="manager.html" class="back-link">
+        ← Back to Manager Dashboard
+    </a>
+
+</main>
+
+<script type="module" src="../js/swap-approvals.js"></script>
+
+</body>
+</html>

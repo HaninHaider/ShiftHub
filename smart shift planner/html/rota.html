@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Rota </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow"></p>
+            <h1>Weekly Rota</h1>
+            <p>Manage your team's shifts and schedules</p>
+        </div>
+
+        <a href="manager.html" class="header-link">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <!-- Weekly calendar, populated by rota.js -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>Team Schedule</h2>
+                <p class="muted">
+                    View scheduled shifts for the week.
+                </p>
+            </div>
+
+            <button type="button"
+                    id="todayButton"
+                    class="secondary-button">
+                Today
+            </button>
+        </div>
+
+        <div class="week-navigation">
+            <button type="button"
+                    id="prevWeek"
+                    class="secondary-button">
+                ← Previous
+            </button>
+
+            <h3 id="weekLabel">This Week</h3>
+
+            <button type="button"
+                    id="nextWeek"
+                    class="secondary-button">
+                Next →
+            </button>
+        </div>
+
+        <div id="weekCalendar" class="week-calendar"></div>
+    </section>
+
+    <!-- Shifts for the selected day -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2 id="selectedDayLabel">
+                    Scheduled Shifts
+                </h2>
+                <p class="muted">
+                    Employees working on the selected day.
+                </p>
+            </div>
+
+            <span id="shiftCount" class="shift-count">
+                0 shifts
+            </span>
+        </div>
+
+        <div id="shiftList" class="shift-list">
+            <p class="muted">
+                No shifts scheduled for this day.
+            </p>
+        </div>
+    </section>
+
+    <!-- Create a new shift -->
+    <section class="panel">
+        <h2>Create a Shift</h2>
+        <p class="muted">
+            Select an employee and enter their shift details.
+        </p>
+
+        <form id="shiftForm">
+            <div class="form-grid">
+
+                <div class="form-field">
+                    <label for="shiftEmployee">Employee</label>
+                    <select id="shiftEmployee" required>
+                        <option value="">
+                            Select an employee
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="shiftDate">Shift Date</label>
+                    <input type="date"
+                           id="shiftDate"
+                           required>
+                </div>
+
+                <div class="form-field">
+                    <label for="shiftStart">Start Time</label>
+                    <input type="time"
+                           id="shiftStart"
+                           required>
+                </div>
+
+                <div class="form-field">
+                    <label for="shiftEnd">Finish Time</label>
+                    <input type="time"
+                           id="shiftEnd"
+                           required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="primary-button">
+                Add Shift
+            </button>
+        </form>
+    </section>
+
+    <!-- Weekly totals -->
+    <section class="panel">
+        <h2>Weekly Overview</h2>
+        <p class="muted">
+            A summary of shifts scheduled for the selected week.
+        </p>
+
+        <div class="summary-grid">
+
+            <div class="summary-card">
+                <h3>Total Shifts</h3>
+                <p id="totalShifts">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Scheduled Hours</h3>
+                <p id="totalHours">0 hrs</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Employees Working</h3>
+                <p id="workingEmployees">0</p>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="manager.html" class="back-link">
+        ← Back to Manager Dashboard
+    </a>
+
+</main>
+
+<script src="../js/rota.js"></script>
+
+</body>
+</html>

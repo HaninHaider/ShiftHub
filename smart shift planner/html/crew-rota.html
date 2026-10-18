@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Rota </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow"></p>
+            <h1>My Rota</h1>
+            <p>View your shifts and weekly schedule.</p>
+        </div>
+
+        <a href="crew.html" class="header-link">
+            Back to Crew Dashboard
+        </a>
+    </header>
+
+    <!-- Signed-in employee -->
+    <section class="panel">
+        <h2>My Schedule</h2>
+        <p class="muted">
+            View your upcoming shifts and weekly schedule.
+        </p>
+
+        <div class="form-field">
+            <label for="crewEmployee">Employee</label>
+            <select id="crewEmployee" disabled>
+                <option value="">Loading your account...</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Weekly Calendar -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>Weekly Schedule</h2>
+                <p class="muted">
+                    Select a day to see your shifts.
+                </p>
+            </div>
+
+            <button type="button"
+                    id="crewToday"
+                    class="secondary-button">
+                Today
+            </button>
+        </div>
+
+        <div class="week-navigation">
+            <button type="button"
+                    id="crewPrevWeek"
+                    class="secondary-button">
+                ← Previous
+            </button>
+
+            <h3 id="crewWeekLabel">This Week</h3>
+
+            <button type="button"
+                    id="crewNextWeek"
+                    class="secondary-button">
+                Next →
+            </button>
+        </div>
+
+        <div id="crewCalendar" class="week-calendar"></div>
+    </section>
+
+    <!-- Personal shifts and swap offer buttons -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>My Shifts</h2>
+                <p id="crewSelectedDay" class="muted">
+                    Select a day to view your shifts.
+                </p>
+            </div>
+
+            <span id="myShiftCount" class="shift-count">
+                0 shifts
+            </span>
+        </div>
+
+        <div id="myShiftList" class="shift-list">
+            <p class="muted">No shifts to display.</p>
+        </div>
+    </section>
+
+    <!-- Other employees working -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>Team Scheduled</h2>
+                <p class="muted">
+                    See who else is working on the selected day.
+                </p>
+            </div>
+
+            <span id="teamShiftCount" class="shift-count">
+                0 shifts
+            </span>
+        </div>
+
+        <div id="teamShiftList" class="shift-list">
+            <p class="muted">
+                No team shifts to display.
+            </p>
+        </div>
+    </section>
+
+    <!-- Offers and requests for shift swaps -->
+    <section class="panel">
+        <div class="section-heading">
+            <div>
+                <h2>Available Shift Swaps</h2>
+                <p class="muted">
+                    View shifts offered by other employees
+                    and request a swap.
+                </p>
+            </div>
+        </div>
+
+        <div id="availableSwaps" class="shift-list">
+            <p class="muted">
+                No shifts available for swapping.
+            </p>
+        </div>
+    </section>
+
+    <!-- Weekly Hours -->
+    <section class="panel">
+        <h2>My Weekly Hours</h2>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <h3>Scheduled Shifts</h3>
+                <p id="crewTotalShifts">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Scheduled Hours</h3>
+                <p id="crewTotalHours">0 hrs</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Contracted Hours</h3>
+                <p id="crewContractHours">0 hrs</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="crew.html" class="back-link">
+        ← Back to Crew Dashboard
+    </a>
+
+</main>
+
+<script type="module" src="../js/crew-rota.js"></script>
+
+</body>
+</html>

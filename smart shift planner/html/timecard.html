@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timecard </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow"></p>
+            <h1>Timecard</h1>
+            <p>Track your working hours and view your history.</p>
+        </div>
+
+        <a href="crew.html" class="header-link">
+            Back to Crew Dashboard
+        </a>
+    </header>
+
+    <!-- Clock In / Clock Out -->
+    <section class="panel">
+        <h2>Clock In / Clock Out</h2>
+        <p class="muted">
+            Record when you start and finish your shift.
+        </p>
+
+        <h3 id="clockStatus" aria-live="polite">
+            Clocked Out
+        </h3>
+
+        <h1 id="clockTimer">00:00:00</h1>
+
+        <div class="timecard-actions">
+            <button type="button"
+                    id="clockInButton"
+                    class="primary-button">
+                Clock In
+            </button>
+
+            <button type="button"
+                    id="clockOutButton"
+                    class="primary-button">
+                Clock Out
+            </button>
+        </div>
+
+        <p id="clockMessage" aria-live="polite"></p>
+    </section>
+
+    <!-- Last Completed Shift -->
+    <section class="panel">
+        <h2>Last Completed Shift</h2>
+
+        <p id="lastShift" class="muted">
+            No completed shifts yet.
+        </p>
+    </section>
+
+    <!-- Timecard History -->
+    <section class="panel">
+        <h2>Timecard History</h2>
+
+        <p class="muted">
+            View your previous clock-ins, clock-outs
+            and total recorded hours.
+        </p>
+
+        <div class="hours-table-wrapper">
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Clock In</th>
+                        <th>Clock Out</th>
+                        <th>Hours Worked</th>
+                    </tr>
+                </thead>
+
+                <tbody id="timecardHistoryBody"></tbody>
+            </table>
+        </div>
+
+        <p id="totalWorkedHours"></p>
+    </section>
+
+    <a href="crew.html" class="back-link">
+        ← Back to Crew Dashboard
+    </a>
+
+</main>
+
+<script src="../js/timecard.js"></script>
+
+</body>
+</html>

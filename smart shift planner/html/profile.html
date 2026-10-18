@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow"></p>
+            <h1>My Profile</h1>
+            <p>View your employee details and account information.</p>
+        </div>
+
+        <a href="crew.html" class="header-link">
+            Back to Crew Dashboard
+        </a>
+    </header>
+
+    <!-- Account details are loaded from Supabase -->
+    <section class="panel">
+        <h2>Personal Information</h2>
+        <p class="muted">
+            Your details are managed by your manager.
+        </p>
+
+        <div class="form-field">
+            <label>Full Name</label>
+            <p id="profileName">Loading...</p>
+        </div>
+
+        <div class="form-field">
+            <label>Email Address</label>
+            <p id="profileEmail">Loading...</p>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Employment Details</h2>
+
+        <div class="form-field">
+            <label>Position</label>
+            <p id="profilePosition">Loading...</p>
+        </div>
+
+        <div class="form-field">
+            <label>Contracted Weekly Hours</label>
+            <p id="profileHours">Loading...</p>
+        </div>
+
+        <div class="form-field">
+            <label>Age Category</label>
+            <p id="profileAge">Loading...</p>
+        </div>
+    </section>
+
+    <a href="crew.html" class="back-link">
+        ← Back to Crew Dashboard
+    </a>
+
+</main>
+
+<script type="module" src="../js/profile.js"></script>
+
+</body>
+</html>

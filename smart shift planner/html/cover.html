@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Shift Cover | ShiftSync</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">SHIFT MANAGEMENT</p>
+            <h1>Find Shift Cover</h1>
+            <p>Find suitable employees to cover a shift</p>
+        </div>
+
+        <a href="manager.html" class="header-link">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <section class="panel">
+        <h2>Select a Shift</h2>
+        <p class="muted">
+            Choose the shift that needs covering.
+        </p>
+
+        <div class="form-field">
+            <label for="coverShift">Scheduled Shift</label>
+            <select id="coverShift">
+                <option value="">Select a shift</option>
+            </select>
+        </div>
+
+        <button type="button"
+                id="findCoverButton"
+                class="primary-button">
+            Find Available Employees
+        </button>
+    </section>
+
+    <!-- cover.js displays eligibility and assignment buttons -->
+    <section class="panel">
+        <h2>Available Employees</h2>
+
+        <p class="muted">
+            Employees are checked against availability,
+            position, scheduled hours and rest periods.
+        </p>
+
+        <div id="coverResults">
+            <p class="muted">
+                Select a shift to see suitable employees.
+            </p>
+        </div>
+    </section>
+
+    <a href="manager.html" class="back-link">
+        ← Back to Manager Dashboard
+    </a>
+
+</main>
+
+<script src="../js/cover.js"></script>
+
+</body>
+</html>

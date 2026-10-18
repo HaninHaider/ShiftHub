@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <main class="welcome-page">
+        <div class="welcome-card">
+
+            <p class="eyebrow"></p>
+            <h1>ShiftHub</h1>
+
+            <p class="muted">
+                Sign in to view your shifts, manage your
+                schedule and track your hours.
+            </p>
+
+            <h2>Sign In</h2>
+
+            <form id="loginForm">
+
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           autocomplete="email"
+                           required>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Enter your password"
+                           autocomplete="current-password"
+                           required>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Sign In
+                </button>
+
+            </form>
+
+            <p class="note">
+                Don't have an account?
+                <a href="register.html">Create Account</a>
+            </p>
+
+            <p class="note">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </p>
+
+            <a href="index.html" class="back-link">
+                ← Back to Home
+            </a>
+
+        </div>
+    </main>
+
+    <script type="module" src="../js/login.js"></script>
+
+</body>
+</html>

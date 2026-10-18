@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Requests </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">EMPLOYEE MANAGEMENT</p>
+            <h1>Account Requests</h1>
+            <p>Review new employee registrations.</p>
+        </div>
+
+        <a href="manager.html" class="header-link">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <section class="panel">
+        <h2>Pending Approvals</h2>
+
+        <p class="muted">
+            Approve employees and assign their position
+            before they can access ShiftSync.
+        </p>
+
+        <p id="requestMessage" aria-live="polite">
+            Loading requests...
+        </p>
+
+        <!-- Requests are loaded from Supabase -->
+        <div id="requestsList"></div>
+    </section>
+
+    <a href="manager.html" class="back-link">
+        ← Back to Manager Dashboard
+    </a>
+
+</main>
+
+<script type="module" src="../js/requests.js"></script>
+
+</body>
+</html>

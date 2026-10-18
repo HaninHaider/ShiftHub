@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew Dashboard </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow"></p>
+            <h1>ShiftHub</h1>
+            <p>Crew Dashboard</p>
+        </div>
+
+        <button type="button"
+                id="logoutButton"
+                class="header-link">
+            Log Out
+        </button>
+    </header>
+
+    <section class="dashboard-intro">
+        <h2 id="crewWelcome">Welcome to ShiftSync</h2>
+        <p id="crewAccountMessage" class="muted">
+            Loading your account...
+        </p>
+    </section>
+
+    <section class="dashboard-grid">
+
+        <!-- My Rota -->
+        <a href="crew-rota.html" class="dashboard-card">
+            <h2>My Rota</h2>
+            <p>
+                View your weekly schedule, upcoming
+                shifts and who you're working with.
+            </p>
+            <span class="card-link">
+                View My Rota →
+            </span>
+        </a>
+
+        <!-- My Timecard -->
+        <a href="timecard.html" class="dashboard-card">
+            <h2>My Timecard</h2>
+            <p>
+                Clock in, clock out and review your
+                previous working hours.
+            </p>
+            <span class="card-link">
+                Open Timecard →
+            </span>
+        </a>
+
+        <!-- My Profile -->
+        <a href="profile.html" class="dashboard-card">
+            <h2>My Profile</h2>
+            <p>
+                View your position, contracted hours
+                and account information.
+            </p>
+            <span class="card-link">
+                View My Profile →
+            </span>
+        </a>
+
+    </section>
+
+</main>
+
+<script type="module" src="../js/crew.js"></script>
+<script type="module" src="../js/logout.js"></script>
+
+</body>
+</html>

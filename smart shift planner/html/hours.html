@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hours Overview </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<main class="app-page">
+
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">SHIFT MANAGEMENT</p>
+            <h1>Hours Overview</h1>
+            <p>Review employee hours and weekly schedules.</p>
+        </div>
+
+        <a href="manager.html" class="header-link">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <section class="panel">
+        <h2>Weekly Hours</h2>
+
+        <p class="muted">
+            Compare scheduled hours against contracted hours.
+        </p>
+
+        <div class="form-field">
+            <label for="weekDate">Select Week</label>
+            <input type="date" id="weekDate">
+        </div>
+
+        <div id="weekLabel" class="muted"></div>
+    </section>
+
+    <!-- JavaScript fills the table with employee hour totals -->
+    <section class="panel">
+        <h2>Employee Hours</h2>
+
+        <div class="hours-table-wrapper">
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Position</th>
+                        <th>Contracted</th>
+                        <th>Scheduled</th>
+                        <th>Remaining</th>
+                        <th>Above Contract</th>
+                    </tr>
+                </thead>
+
+                <tbody id="hoursTableBody"></tbody>
+            </table>
+        </div>
+
+        <p class="muted">
+            Hours are calculated from scheduled shifts,
+            not clock-in or clock-out records.
+        </p>
+    </section>
+
+    <a href="manager.html" class="back-link">
+        ← Back to Manager Dashboard
+    </a>
+
+</main>
+
+<script src="../js/hours.js"></script>
+
+</body>
+</html>
